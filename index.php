@@ -77,7 +77,7 @@ if (isset($_SESSION['usuario_matri']))
                 acompanhando as novidades sobre o trânsito e tudo mais que o pessoal postar lá!
                 Seria legal se você também desse uma olhada e contribuísse com os outros, não acha?
                 Afinal, você também não gosta de chegar num ponto do caminho e perceber que vai se
-                atrasar algumas horas para o almoço, certo? <br/><br/>
+                atrasar algumas horas para o jantar, certo? <br/><br/>
                 Aproveite este site!
             </p>
         </div>

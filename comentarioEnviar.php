@@ -21,7 +21,7 @@
     <div class="w3-panel w3-padding-large w3-card-4 w3-light-grey">
         <h1 class="w3-xxlarge">Comentário</h1>
         <?php
-        $servername = "localhost:3307";
+        $servername = "localhost:3306";
         $username = "usu@SoftwareCarona";
         $password = "caronadesoftware";
         $database = "software_de_carona";

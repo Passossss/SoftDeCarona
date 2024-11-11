@@ -33,7 +33,7 @@ RODAPE.PHP
                 </p>
             </div>
             <footer class="w3-container w3-teal ">
-                <p>PUCPR 2020</p>
+                <p>PUCPR 2024</p>
             </footer>
         </div>
     </div>

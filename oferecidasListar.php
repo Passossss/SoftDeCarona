@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<!--
-  Software de Carona
-
- -->
+   <!--
+     Software de Carona          
+     
+    -->
 <html>
 <head>
 
-    <title>Software de Carona</title>
-    <link rel="icon" type="image/png" href="imagens/logoSoftwareCarona.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-        .w3-theme {
-            color: #ffff !important;
-            background-color: #380077 !important
-        }
+<title>Software de Carona</title>
+<link rel="icon" type="image/png" href="imagens/logoSoftwareCarona.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    .w3-theme {
+        color: #ffff !important;
+        background-color: #380077 !important
+    }
 
-        .w3-code {
-            border-left: 4px solid teal;
-        }
+    .w3-code {
+        border-left: 4px solid teal;
+    }
 
-        .myMenu {
-            margin-bottom: 150px
-        }
-    </style>
+    .myMenu {
+        margin-bottom: 150px
+    }
+</style>
 </head>
 <body onload="w3_show_nav('menuPassag')">
 <!-- Inclui MENU.PHP  -->
@@ -53,21 +53,21 @@
             $username = "usu@SoftwareCarona";
             $password = "caronadesoftware";
             $database = "software_de_carona";
-
-            // Verifica conexão
+			
+			// Verifica conexão
             $conn = mysqli_connect($servername, $username, $password, $database);
-
-            // Verifica conexão
-            if (!$conn) {
+			
+			// Verifica conexão 
+			if (!$conn) {
                 echo "</table>";
                 echo "</div>";
                 die("Falha na conexão com o Banco de Dados: " . mysqli_connect_error());
             }
-
-            mysqli_query($conn,"SET NAMES 'utf8'");
-            mysqli_query($conn,"SET NAMES 'utf8'");
-            mysqli_query($conn,'SET character_set_connection=utf8');
-            mysqli_query($conn,'SET character_set_client=utf8');
+			
+			mysqli_query($conn,"SET NAMES 'utf8'");
+			mysqli_query($conn,"SET NAMES 'utf8'");
+			mysqli_query($conn,'SET character_set_connection=utf8');
+			mysqli_query($conn,'SET character_set_client=utf8');
             mysqli_query($conn,'SET character_set_results=utf8');
             $matricula = $_SESSION['usuario_matri'];
 
@@ -79,14 +79,14 @@
                     AND c.Cancelada = 0
                     AND u.Matricula != '$matricula'
                     ORDER BY c.DataCriacao DESC";
-
+            
             echo "<div class='w3-responsive w3-card-4'>";
             if ($result = mysqli_query($conn, $sql)) {
 
                 echo "<table class='w3-table-all'>";
                 echo "	<tr>";
-                echo "	  <th>Motorista</th>";
-                echo "	  <th>Local de partida</th>";
+				echo "	  <th>Motorista</th>";
+				echo "	  <th>Local de partida</th>";
                 echo "	  <th>Local de destino</th>";
                 echo "	  <th>Data de Criacao</th>";
                 echo "	  <th> </th>";
@@ -104,11 +104,11 @@
                         echo "</td><td>";
                         echo $row["DataCriacao"];
                         echo "</td><td>";
-                        ?>
+				?>
                         <a class="w3-button w3-teal" href='OferecidaConfirmar.php?Cod=<?php echo $cod; ?>'>Aceitar</a>
                         </td>
                         </tr>
-                        <?php
+				 <?php
                     }
                 }
                 echo "</table>";
@@ -117,7 +117,7 @@
                 echo "Erro executando SELECT: " . mysqli_error($conn);
             }
 
-            mysqli_close($conn);
+            mysqli_close($conn); 
             ?>
         </div>
     </div>
@@ -125,14 +125,14 @@
 
     <footer class="w3-panel w3-padding-32 w3-card-4 w3-light-grey w3-center">
         <p>
-        <nav>
-            <a class="w3-button w3-teal w3-hover-white"
-               onclick="document.getElementById('id01').style.display='block'">Sobre</a>
-        </nav>
+            <nav>
+                <a class="w3-button w3-teal w3-hover-white"
+                   onclick="document.getElementById('id01').style.display='block'">Sobre</a>
+            </nav>
         </p>
     </footer>
 
-    <!-- FIM PRINCIPAL -->
+<!-- FIM PRINCIPAL -->
 </div>
 <!-- Inclui RODAPE.PHP  -->
 <?php require 'rodape.php';?>

@@ -41,7 +41,7 @@
     <div class="w3-main w3-container" style="margin-left:270px;margin-top:117px;">
 
     <?php
-        $servername = "localhost:3307";
+        $servername = "localhost:3306";
         $username = "usu@SoftwareCarona";
         $password = "caronadesoftware";
         $database = "software_de_carona";
@@ -90,7 +90,7 @@
                             <h6 class="w3-text-grey w3-small">Publicado em: <?= $row['DataCriacaoPostagem'] ?></h6>
                             <hr style="border: 1px solid teal;">
                             <?php
-                                $servername = "localhost:3307";
+                                $servername = "localhost:3306";
                                 $username = "usu@SoftwareCarona";
                                 $password = "caronadesoftware";
                                 $database = "software_de_carona";

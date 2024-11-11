@@ -24,7 +24,7 @@ $_SESSION['usuario_senha'] = $_POST['Senha'];
 $usuario_email = $_SESSION['usuario_email'];
 $usuario_senha_md5 = md5($_SESSION['usuario_senha']);
 
-$servername = "localhost:3307";
+$servername = "localhost:3306";
 $username = "usu@SoftwareCarona";
 $password = "caronadesoftware";
 $database = "software_de_carona";

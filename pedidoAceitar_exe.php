@@ -34,7 +34,7 @@
 
 	<?php
 		
-		$servername = "localhost:3307";
+		$servername = "localhost:3306";
         $username = "usu@SoftwareCarona";
         $password = "caronadesoftware";
 		$database = "software_de_carona";
